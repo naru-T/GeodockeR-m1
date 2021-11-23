@@ -7,9 +7,6 @@ services:
     volumes:
       - .:/workspace
     tty: true
-    #environment:
-    #  PASSWORD: passwd
-    #ports:
-    #  - "8080:8787"
     #cpu_quota: 50000
     #mem_limit: 9g
+
