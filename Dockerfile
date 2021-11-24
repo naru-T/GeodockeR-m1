@@ -4,11 +4,11 @@ RUN apt-get update && \
      apt-get install -y curl git
 RUN apt-get update && \
      apt-get install -y --no-install-recommends \
-     binutils libproj-dev gdal-bin libgit2-dev libpng-dev libcairo2-dev gdal-bin libudunits2-dev libgdal-dev libjq-dev
+     binutils libproj-dev gdal-bin libgit2-dev libpng-dev libcairo2-dev gdal-bin libudunits2-dev libgdal-dev libjq-dev pandoc pandoc-citeproc
 
 #basic R packages
-RUN R -e "install.packages(c('remotes','renv','tinytex','s2','PKI','bookdown','rmarkdown','rticles','rmdshower','languageserver','httpgd'))" \
-   && R -e "install.packages(c('tidyverse','sf','sp','raster','tmap','tmaptools','GWmodel','leaflet','reticulate','rgee','mlr'))" 
+RUN R -e "install.packages(c('remotes','renv','tinytex','s2','PKI','bookdown','rmarkdown','rticles','rmdshower','languageserver','httpgd','shiny', \
+          'rgdal','tidyverse','sf','sp','raster','tmap','tmaptools','GWmodel','leaflet','reticulate','rgee','mlr'))" 
 
 ###############################
 # if renv is provided, use this block
